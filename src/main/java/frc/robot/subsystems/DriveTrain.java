@@ -33,20 +33,6 @@ public class DriveTrain extends SubsystemBase {
   public void periodic() {
     Right = RobotContainer.XboxController.getY(Hand.kRight);
     Left = RobotContainer.XboxController.getY(Hand.kLeft);
-    
-    if (Right-PRight > Max) {
-      Right = PRight + Max;
-    }
-    else if (PRight-Right > Max) {
-      Right = PRight - Max;
-    }
-
-    if (Left-PLeft > Max) {
-      Left = PLeft + Max;
-    }
-    else if (PLeft-Left > Max) {
-      Left = PLeft - Max;
-    }
 
     FL.set(-Left*0.5);
     BL.set(-Left*0.5);
